@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: service_name
+  name: service_name
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service_name
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: service_name
+    spec:
+      #restartPolicy: Never
+      containers:
+      - image: image_name
+        name: service_name
+        #command:
+        #  - "/bin/sh"
+        #  - "-c"
+        #  - "env"
+        resources: {}
+        env:
+          - name: pathurl #name of the environment variable we are going to create inside pod
+            valueFrom:
+              configMapKeyRef:
+                key: testurl #which key to use extract the respective value from configmap, then that value is assigned to pathurl environment variable
+                name: cmtest #name of the configmap
