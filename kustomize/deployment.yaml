@@ -2,23 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: service_name
-  name: service_name
+    app: devopstest
+  name: devopstest
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: service_name
+      app: devopstest
   strategy: {}
   template:
     metadata:
       labels:
-        app: service_name
+        app: devopstest
     spec:
       #restartPolicy: Never
       containers:
-      - image: image_name
-        name: service_name
+      - image: prageeth1985/devopstest:20221127-0314
+        name: devopstest
         #command:
         #  - "/bin/sh"
         #  - "-c"
