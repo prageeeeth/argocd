@@ -23,6 +23,7 @@ spec:
         #  - "/bin/sh"
         #  - "-c"
         #  - "env"
+        #test
         resources: {}
         env:
           - name: pathurl #name of the environment variable we are going to create inside pod
