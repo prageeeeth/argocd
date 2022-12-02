@@ -5,7 +5,7 @@ metadata:
     app: devopstest
   name: devopstest
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: devopstest
