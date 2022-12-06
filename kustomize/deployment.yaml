@@ -17,13 +17,12 @@ spec:
     spec:
       #restartPolicy: Never
       containers:
-      - image: prageeth1985/devopstest:20221127-0420
+      - image: prageeth1985/devopstest:20221206-1551
         name: devopstest
         #command:
         #  - "/bin/sh"
         #  - "-c"
         #  - "env"
-        #test
         resources: {}
         env:
           - name: pathurl #name of the environment variable we are going to create inside pod
