@@ -17,7 +17,7 @@ spec:
     spec:
       #restartPolicy: Never
       containers:
-      - image: prageeth1985/devopstest:20221207-0217
+      - image: prageeth1985/devopstest:20221207-0220
         name: devopstest
         #command:
         #  - "/bin/sh"
