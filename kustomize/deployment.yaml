@@ -18,14 +18,20 @@ spec:
       #restartPolicy: Never
       #automountServiceAccountToken: false
       containers:
-      - image: prageeth1985/devopstest:20230108-0746
+      - image: prageeth1985/devopstest:20230108-1644
         name: devopstest
         #command:
         #  - "/bin/sh"
         #  - "-c"
         #  - "env"
         command: ['sh', '-c', 'echo The app iis running! && sleep 3600']
-        resources: {}
+        resources:
+          requests:
+            cpu: 200m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 100Mi
         env:
           - name: pathurl #name of the environment variable we are going to create inside pod
             valueFrom:
