@@ -18,7 +18,7 @@ spec:
       #restartPolicy: Never
       #automountServiceAccountToken: false
       containers:
-      - image: prageeth1985/devopstest:20230212-0132
+      - image: prageeth1985/devopstest:20230212-0133
         name: devopstest
         #command:
         #  - "/bin/sh"
